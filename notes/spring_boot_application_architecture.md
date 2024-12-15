@@ -14,27 +14,27 @@ Spring Boot applications typically follow a layered architecture pattern that pr
 ```ascii
 ┌──────────────────────────────────────────┐
 │            Spring Boot App               │
-│                                         │
-│  ┌────────────┐      ┌──────────────┐   │
-│  │   Client   │ ←──→ │    API       │   │
-│  └────────────┘      │   Gateway    │   │
-│                      └──────────────┘   │
-│                            ↓            │
-│  ┌──────────────────────────────────��   │
-│  │        Application Layer         │   │
-│  └──────────────────────────────────┘   │
-│                    ↓                    │
-│  ┌──────────────────────────────────┐   │
-│  │         Business Layer           │   │
-│  └──────────────────────────────────┘   │
-│                    ↓                    │
-│  ┌──────────────────────────────────┐   │
-│  │         Persistence Layer        │   │
-│  └──────────────────────────────────┘   │
-│                    ↓                    │
-│  ┌──────────────────────────────────┐   │
-│  │           Database               │   │
-│  └──────────────────────────────────┘   │
+│                                          │
+│  ┌────────────┐      ┌──────────────┐    │
+│  │   Client   │ ←──→ │    API       │    │
+│  └────────────┘      │   Gateway    │    │
+│                      └──────────────┘    │
+│                            ↓             │
+│  ┌──────────────────────────────────┐    │
+│  │        Application Layer         │    │
+│  └──────────────────────────────────┘    │
+│                    ↓                     │
+│  ┌──────────────────────────────────┐    │
+│  │         Business Layer           │    │
+│  └──────────────────────────────────┘    │
+│                    ↓                     │
+│  ┌──────────────────────────────────┐    │
+│  │         Persistence Layer        │    │
+│  └──────────────────────────────────┘    │
+│                    ↓                     │
+│  ┌──────────────────────────────────┐    │
+│  │           Database               │    │
+│  └──────────────────────────────────┘    │
 └──────────────────────────────────────────┘
 ```
 
@@ -61,7 +61,7 @@ Spring Boot applications typically follow a layered architecture pattern that pr
 │ • Business logic                    │
 │ • Transaction management            │
 │ • Integration with external systems │
-│ • Data transformation              │
+│ • Data transformation               │
 └─────────────────────────────────────┘
 ```
 
@@ -70,10 +70,10 @@ Spring Boot applications typically follow a layered architecture pattern that pr
 ┌─────────────────────────────────────┐
 │           Repositories              │
 ├─────────────────────────────────────┤
-│ • Data access objects              │
-│ • CRUD operations                  │
-│ • Custom queries                   │
-│ • Data mapping                     │
+│ • Data access objects               │
+│ • CRUD operations                   │
+│ • Custom queries                    │
+│ • Data mapping                      │
 └─────────────────────────────────────┘
 ```
 
@@ -83,7 +83,7 @@ Spring Boot applications typically follow a layered architecture pattern that pr
 ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │   Request    │     │   Service    │     │  Repository  │
 │              │     │              │     │              │
-│ @Controller  │ ──→ │  @Service   │ ──→ │ @Repository  │
+│ @Controller  │ ──→ │  @Service    │ ──→ │ @Repository  │
 │              │     │              │     │              │
 └──────────────┘     └──────────────┘     └──────────────┘
        ↑                    ↑                    ↑
@@ -153,8 +153,8 @@ com.company.project/
 ### 2. Cross-Cutting Concerns
 
 ```ascii
-┌──────���──────────────────────────────────────────┐
-│              Cross-Cutting Concerns             │
+┌──────���───────────────────────────────────────┐
+│              Cross-Cutting Concerns            │
 ├─────────────┬─────────────┬───────────┬────────┤
 │  Logging    │  Security   │  Caching  │  AOP   │
 └─────────────┴─────────────┴───────────┴────────┘
@@ -168,17 +168,17 @@ com.company.project/
 ```ascii
 ┌────────────────────┐
 │   Global Error     │
-│     Handling      │
+│     Handling       │
 └────────────────────┘
          ↓
 ┌────────────────────┐
 │  Custom Exception  │
-│     Handling      │
+│     Handling       │
 └────────────────────┘
          ↓
 ┌────────────────────┐
 │   Error Response   │
-│      Object       │
+│      Object        │
 └────────────────────┘
 ```
 
