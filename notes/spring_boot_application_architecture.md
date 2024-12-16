@@ -37,6 +37,7 @@ Spring Boot applications typically follow a layered architecture pattern that pr
 │  └──────────────────────────────────┘    │
 └──────────────────────────────────────────┘
 ```
+<img width="793" alt="image" src="https://github.com/user-attachments/assets/b3d4d7da-240c-466b-9193-5e6a0801aeee" />
 
 ## Layered Architecture
 
